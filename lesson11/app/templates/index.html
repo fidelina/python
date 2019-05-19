@@ -1,0 +1,18 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Site</title>
+        {% else %}
+        <title>Добро пожаловать на мой сайт</title>
+        {% endif %}
+    </head>
+    <body>
+        <a href="/create">Создать пост</a>
+        <h1>Hello, {{ user.username }}!</h1>
+        <h2> {{user.female}}</h2>
+        <li>{{list1.str}}</li>
+    {% for post in posts %}
+        <div><p>{{ post.title }} сказал: <b>{{ post.text }}</b></p></div>
+        {% endfor %}
+    </body>
+</html>
